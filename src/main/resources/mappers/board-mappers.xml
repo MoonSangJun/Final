@@ -2,21 +2,22 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="Board">
     <insert id ="insertBoard">
-        insert into BOARD2 (category, title, writer, content)
-        values(#{category} , #{title} , #{writer} , #{content})
+        insert into Recruiting (purpose, nickname, duedate, personnel, apply, introduce, inquire, manager, qualifications, interview, image)
+        values(#{purpose} , #{nickname} , #{duedate} , #{personnel} , #{apply} , #{introduce} , #{inquire} , #{manager} , #{qualifications} , #{interview} , #{image})
     </insert>
     <update id ="updateBoard">
-        update BOARD2
-        set title=#{title}, content=#{content}, writer=#{writer}, category=#{category}
+        update Recruiting
+        set purpose=#{purpose} ,nickname=#{nickname}, duedate=#{duedate}, personnel=#{personnel}, apply=#{apply}, introduce=#{introduce},
+            inquire=#{inquire}, manager=#{manager}, qualifications=#{qualifications}, interview=#{interview}, image=#{image}
         where seq=#{seq}
     </update>
     <delete id ="deleteBoard">
-        delete from BOARD2 where seq=#{seq}
+        delete from Recruiting where seq=#{seq}
     </delete>
     <select id="getBoard" resultType="board">
-        select * from BOARD2 where seq=#{seq}
+        select * from Recruiting where seq=#{seq}
     </select>
     <select id="getBoardList" resultType="board">
-        select * from BOARD2 order by seq desc
+        select * from Recruiting order by seq desc
     </select>
 </mapper>

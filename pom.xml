@@ -61,6 +61,11 @@
       <version>3.0.1</version>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+      <groupId>servlets.com</groupId>
+      <artifactId>cos</artifactId>
+      <version>05Nov2002</version>
+    </dependency>
 
   </dependencies>
   <properties>
@@ -70,7 +75,7 @@
     <org.slf4j-version>1.6.6</org.slf4j-version>
   </properties>
   <build>
-    <finalName>CRUDproject</finalName>
+    <finalName>Final_project</finalName>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -79,6 +84,11 @@
         <configuration>
           <release>1.8</release>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.3.2</version>
       </plugin>
     </plugins>
   </build>
